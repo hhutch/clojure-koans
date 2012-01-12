@@ -15,9 +15,9 @@
           (multiply-by-5 4)))
 
   "Don't forget: first things first"
-  (= [__ __ __ __]
+  (= [:a :b :x :y]
        (let [ab-adder (partial concat [:a :b])]
-         (ab-adder [__ __])))
+         (ab-adder [:x :y])))
 
   "Functions can join forces as one 'composed' function"
   (= 25 (let [inc-and-square (comp square inc)]

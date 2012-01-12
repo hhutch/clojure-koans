@@ -9,7 +9,10 @@
         (recur (dec n) (not acc)))))
 
 (defn recursive-reverse [coll]
-  __)
+  (loop [start coll reversed '()]
+    (if (= 0 (count start))
+        reversed
+        (recur (rest start) (conj reversed (first start))))))
 
 (defn factorial [n]
   (loop [n n acc 1]
