@@ -1,7 +1,6 @@
 (defn square [x] (* x x))
 
 (meditations
-
   "One may know what they seek by knowing what they do not seek"
   (= [true false true] (let [not-a-symbol? (complement symbol?)]
                   (map not-a-symbol? [:a 'b "c"])))
@@ -16,9 +15,9 @@
           (multiply-by-5 4)))
 
   "Don't forget: first things first"
-  (= [:a :b 'foo 'bar]
-     (let [ab-adder (partial concat [:a :b])]
-       (ab-adder ['foo 'bar])))
+  (= [__ __ __ __]
+       (let [ab-adder (partial concat [:a :b])]
+         (ab-adder [__ __])))
 
   "Functions can join forces as one 'composed' function"
   (= 25 (let [inc-and-square (comp square inc)]
@@ -31,4 +30,3 @@
   "Be careful about the order in which you mix your functions"
   (= 99 (let [square-and-dec (comp dec square)]
            (square-and-dec 10))))
-

@@ -8,6 +8,9 @@
     (if (= n 0) false
         (recur (dec n) (not acc)))))
 
+(defn recursive-reverse [coll]
+  __)
+
 (defn factorial [n]
   (loop [n n acc 1]
     (if (= n 0) acc
@@ -22,6 +25,12 @@
 
   "Having too many stack frames requires explicit tail calls with recur"
   (= false (is-even-bigint? 100003N))
+
+  "Reversing directions is easy when you have not gone far"
+  (= '(1) (recursive-reverse [1]))
+
+  "Yet more difficult the more steps you take"
+  (= '(5 4 3 2 1) (recursive-reverse [1 2 3 4 5]))
 
   "Simple things may appear simple."
   (= 1 (factorial 1))

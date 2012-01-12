@@ -1,6 +1,6 @@
 (meditations
   "There are two ways to create maps"
-  (= {} (hash-map))
+  (= __ (hash-map))
 
   "Maps in clojure associate keys with values"
   (= 0 (count (hash-map)))
@@ -48,4 +48,3 @@
   "Or the values"
   (= (list "Sochi" "Torino" "Vancouver")
      (sort (vals {2006 "Torino" 2010 "Vancouver" 2014 "Sochi"}))))
-

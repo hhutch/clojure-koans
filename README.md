@@ -23,9 +23,9 @@ completed.
 The only things you'll need to run the Clojure Koans are:
 
 - JRE 1.5 or higher
-- [clojure-1.3.0-alpha4.jar](https://github.com/downloads/clojure/clojure/clojure-1.3.0-alpha4.zip)
+- [clojure-1.3.0.jar](http://repo1.maven.org/maven2/org/clojure/clojure/1.3.0/clojure-1.3.0.zip)
 
-clojure-1.3.0-alpha4.jar needs to be in a directory `lib` under this project.
+clojure-1.3.0.jar needs to be in a directory `lib` under this project.
 
 You can use [Leiningen](http://github.com/technomancy/leiningen) to
 automatically install the Clojure jar in the right place. Leiningen will also
@@ -47,12 +47,16 @@ To run the koans, simply run
 
 `script\run` on Windows
 
+It's an auto-runner, so as you save your files with the correct answers, it will
+advance you to the next koan or file.
+
 You'll see something like this:
 
-    FAIL in clojure.lang.PersistentList$EmptyList@1 (equalities.clj:1)
+    Problem in  /home/colin/Projects/clojure-koans/src/koans/equalities.clj
+    ---------------------
+    Assertion failed!
     We shall contemplate truth by testing reality, via equality.
-    expected: (= __ true)
-      actual: (not (= :fill-in-the-blank true))
+    (= __ true)
 
 The output is telling you that you have a failing test in equalities.clj.
 So open that file up and make it pass!  In general, you just fill in the
@@ -64,9 +68,9 @@ so you'll have to pay close attention to the failure messages, because up until
 the very end, making a test pass just means that the next failure message comes
 up.
 
-While it's very easy (especially at first) to just fill in the blanks making
-things pass, you should work slowly, making sure you understand why the answer
-is what it is.  Enjoy your path to Clojure enlightenment!
+While it might be easy (especially at first) to just fill in the blanks making
+things pass, you should work thoughtfully, making sure you understand why the
+answer is what it is.  Enjoy your path to Clojure enlightenment!
 
 
 ### Trying more things out
@@ -80,14 +84,18 @@ run:
 
 Here are some interesting commands you might try, once you're in a running REPL:
 
-    (find-doc "vec")
-    (find-doc #"vec$")
-    (doc vec)
+```clojure
+(find-doc "vec")
+(find-doc #"vec$")
+(doc vec)
+```
 
 And if those still don't make sense:
 
-    (doc doc)
-    (doc find-doc)
+```clojure
+(doc doc)
+(doc find-doc)
+```
 
 will show you what those commands mean.
 
@@ -101,7 +109,7 @@ or `script\test` on Windows), and send a pull request.
 
 The file ideaboard.txt has lots of good ideas for new koans to start, or things
 to add to existing koans.  So write some fun exercises, add your answers to
-`src/path_to_answer_sheet.clj`, and we'll get them in there!
+`resources/koans.clj`, and we'll get them in there!
 
 Feel free to contact me (Colin Jones / trptcolin) on Github or elsewhere if you
 have any questions or want more direction before you start pitching in.
@@ -118,6 +126,10 @@ have any questions or want more direction before you start pitching in.
 - Ben Lickly
 - Alex Robbins
 - Jaskirat Singh Veen
+- Mark Simpson
+- Mike Jansen
+- Caleb Phillips
+- Doug South
 
 
 ### Credits
@@ -140,4 +152,3 @@ Eclipse Public License 1.0 (http://opensource.org/licenses/eclipse-1.0.php)
 which can be found in the file epl-v10.html at the root of this distribution.
 By using this software in any fashion, you are agreeing to be bound by
 the terms of this license.
-

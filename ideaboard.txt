@@ -1,16 +1,13 @@
 Concepts / Language Features
 =====
 Agents
-Atoms
 Vars
 state identity lifetime
-lazy sequences
 Metadata
 Tuples - syntax
 Pattern Matching
 immutability/side effects
 memoization
-recursive list processing
 trampolining
 reflection
 Java interop
@@ -22,7 +19,6 @@ Pre and Post conditions of functions
 Particular Functions
 =====
 vector-of
-case
 flatten
 frequencies
 group-by
