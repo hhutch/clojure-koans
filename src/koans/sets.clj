@@ -1,6 +1,6 @@
 (meditations
   "You can create a set in two ways"
-  (= #{} (set __))
+  (= #{} (set []))
 
   "They are another important data structure in clojure"
   (= 3 (count #{1 2 3}))
